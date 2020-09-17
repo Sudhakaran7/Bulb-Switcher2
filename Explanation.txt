@@ -1,21 +1,53 @@
-class Solution(object):
-    def flipLights(self, n, m):
-        """
-        :type n: int
-        :type m: int
-        :rtype: int
-        """
-        if m == 0:
-            return 1
-        if n == 1:
-            return 2
-        if m == 1 and n == 2:
-            return 3
-        if m == 1 or n == 2:
-            return 4
-        if m == 2:
-            return 7
-        return 8
-val=Solution()
-m,n=map(int,input().split())
-print(val.flipLights(m,n))
+There is a room with n lights which are turned on initially and 4 buttons on the wall. After performing exactly m unknown operations towards buttons, you need to return how many different kinds of status of the n lights could be.
+
+Suppose n lights are labeled as number [1, 2, 3 ..., n], function of these 4 buttons are given below:
+
+Flip all the lights.
+Flip lights with even numbers.
+Flip lights with odd numbers.
+Flip lights with (3k + 1) numbers, k = 0, 1, 2, ...
+
+Input Description:
+Two integers m,n as inputs.
+
+Output Description:
+Print the number of different kinds of status of the n lights could be.
+
+Sample Input:
+1 1
+
+Sample Output:
+2
+
+Explanation:
+Status can be: [on], [off]
+
+Sample Input:
+3 2
+
+Sample Output:
+7
+
+Sample Input:
+4 5
+
+Sample Output:
+8
+
+Sample Input:
+3 9
+
+Sample Output:
+8
+
+Sample Input:
+12 34
+
+Sample Output:
+8
+
+Sample Input:
+2 5
+
+Sample Output:
+4
